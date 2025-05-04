@@ -31,7 +31,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/simple_api:${{ github.sha }} .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/mytodo:${{ github.sha }} .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/simple_api:${{ github.sha }}
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/mytodo:${{ github.sha }}
